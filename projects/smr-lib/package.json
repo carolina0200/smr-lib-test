@@ -1,0 +1,23 @@
+{
+  "name": "smr-lib",
+  "version": "1.1.6",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/platform-browser": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/router": "^6.0.0-rc.0 || ^6.0.0",
+    "font-awesome": "^4.7.0"
+
+  },
+  "homepage": "http://www.saimyr.com.co/",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "license": "MIT"
+}
