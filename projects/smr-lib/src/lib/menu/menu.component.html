@@ -1,18 +1,20 @@
-<div class="sidebar-smr">
-    <ul>
-      <li *ngFor="let item of items"  class="{{item.select ? 'select' : ''}}">
-        <a  class="title" routerLink="/{{item.options[0].path}}" (click)="goItem(item, item.options[0])">
-          <i class="fa {{item.icon}}" aria-hidden="true"></i>
-           {{item.title}}
-        </a>
-        <ul *ngIf="item.options.length > 1">
-          <li *ngFor="let option of item.options"  class="{{option.select ? 'select' : ''}} sub-item" >
-            <a  routerLink="/{{option.path}}" (click)="goItem(item, option )">
-          
-              {{option.name}}
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+<!--
+  <div class="sidebar-smr">
+      <ul>
+        <li *ngFor="let item of items"  class="{{item.select ? 'select' : ''}}">
+          <a  class="title" routerLink="/{{item.options[0].path}}" (click)="goItem(item, item.options[0])">
+            <i class="fa {{item.icon}}" aria-hidden="true"></i>
+             {{item.title}}
+          </a>
+          <ul *ngIf="item.options.length > 1">
+            <li *ngFor="let option of item.options"  class="{{option.select ? 'select' : ''}} sub-item" >
+              <a  routerLink="/{{option.path}}" (click)="goItem(item, option )">
+            
+                {{option.name}}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+-->

@@ -1,14 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SmrLibModule } from 'smr-lib';
+import { SmrLibModule, SmrMenuModule, Route } from 'smr-lib';
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: AppComponent},
-  { path: '**', component: AppComponent}
+const routes: Route[] = [
+  { title: 'Components', select: false, icon: 'fa-database', options: [{name: 'Alerts', path: 'alerts', select: false, loadChildren: ''},
+        { name: 'Badge', path: 'badge', select: false, loadChildren: '' },
+        { name: 'Breadcrumb', path: 'breadcrumb', select: false, loadChildren: '' },
+        { name: 'Buttons', path: 'buttons', select: false, loadChildren: '' },
+        { name: 'Button group', path: 'button-group', select: false, loadChildren: '' }] },
+      { title: 'Layout', select: false, icon: 'fa-desktop', options: [{name: 'Layout', path: 'layout', select: false, loadChildren: ''},
+        { name: 'Badge', path: 'badge', select: false, loadChildren: '' }] },
+      { title: 'Theme', select: false, icon: 'fa-magic', options: [{name: 'Theme', path: 'theme', select: false, loadChildren: ''}] },
+      { title: 'Updates',  select: false, icon: 'fa-repeat', options: [
+        {name: 'Updates', path: 'updates', select: false, loadChildren: ''}] },
 ];
 
 @NgModule({
@@ -18,7 +24,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     SmrLibModule,
-    RouterModule.forRoot(appRoutes, {useHash: true}),
+    SmrMenuModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
