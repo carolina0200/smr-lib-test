@@ -13,7 +13,7 @@ import { Router } from './menu.routes';
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(Router.getRoutes(), {useHash: true}),
+    /*RouterModule.forRoot(Router.getRoutes(), {useHash: true}),*/
   ],
   declarations: [SmrMenuComponent],
   exports: [SmrMenuComponent]
